@@ -1,0 +1,59 @@
+body {
+	background: #fafafa;
+}
+
+#input, .message1, .message2, #convo {
+	font-size: 14px;
+	font-family: "Segoe UI",Arial,sans-serif;
+	line-height: 20px;
+}
+
+
+#inbox {
+	float: left;
+	max-width: 25%;
+	clear: both;
+	
+}
+
+
+#convo {
+	width: 50%;
+	max-width: 40em;
+	margin: auto;
+	padding: 1em;
+	height: 75vh;
+	border: 1px solid #1da1f2;
+	border-radius: 20px;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+#inner {
+	padding: 0.5em;
+	overflow: scroll;
+	height: 95%;
+}
+
+.message1 {
+	background: #1da1f2;
+	color: #ffffff;
+	float: right;
+	border-bottom-right-radius: 0px;
+}
+
+.message2 {
+	background: #e6ecf0;
+	color: #14171a;
+	float: left;
+	border-bottom-right-radius: 0px;
+}
+
+.message1, .message2 {
+	margin-bottom: 0.5em;
+	border-radius: 20px;
+	padding: 5px;
+	padding: 8px 12px;
+	max-width: 250px;
+	clear: both;
+}
