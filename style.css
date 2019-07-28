@@ -1,5 +1,5 @@
 body {
-	background: #fafafa;
+	background: #e6ecf0;
 }
 
 #input, .message1, .message2, #convo {
@@ -50,10 +50,17 @@ body {
 }
 
 .message1, .message2 {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.2em;
 	border-radius: 20px;
 	padding: 5px;
-	padding: 8px 12px;
+	padding: 8px 12px 0px;
 	max-width: 250px;
 	clear: both;
+}
+
+.message1 > p, .message2 > p {
+	font-size: 9px;
+	colour: #ddd;
+	margin: 0;
+	padding: 0;
 }

@@ -18,6 +18,11 @@ function convo() {
 			msg.setAttribute("class", "message2");
 		}
 		msg.innerHTML = msgC.text;
+		
+		var datestring = new Date(Date.parse(msgC.createdAt)).toLocaleString()
+		var timep = document.createElement("p");
+		timep.innerHTML = datestring;
+		msg.appendChild(timep);
 		document.getElementById("inner").appendChild(msg);
 	});
 }
