@@ -1,0 +1,51 @@
+{
+  "dmConversation" : {
+    "conversationId" : "14-12",
+    "messages" : [ {
+      "messageCreate" : {
+        "recipientId" : "14",
+        "text" : "lolwut",
+        "mediaUrls" : [ ],
+        "senderId" : "12",
+        "id" : "1127010986865696777",
+        "createdAt" : "2019-05-11T00:44:14.808Z"
+      }
+    }, {
+      "messageCreate" : {
+        "recipientId" : "12",
+        "text" : "let's start a website and call it twitter",
+        "mediaUrls" : [ ],
+        "senderId" : "14",
+        "id" : "1127010986865696777",
+        "createdAt" : "2019-05-11T00:44:14.808Z"
+      }
+    }, {
+      "messageCreate" : {
+        "recipientId" : "14",
+        "text" : "what is it?",
+        "mediaUrls" : [ ],
+        "senderId" : "12",
+        "id" : "1127010986865696777",
+        "createdAt" : "2019-05-11T00:43:01.808Z"
+      }
+    }, {
+      "messageCreate" : {
+        "recipientId" : "12",
+        "text" : "i got this idea",
+        "mediaUrls" : [ ],
+        "senderId" : "14",
+        "id" : "1127010986865696777",
+        "createdAt" : "2019-05-13T00:42:22.808Z"
+      }
+    }, {
+      "messageCreate" : {
+        "recipientId" : "12",
+        "text" : "yo jack",
+        "mediaUrls" : [ ],
+        "senderId" : "14",
+        "id" : "1127010986865696777",
+        "createdAt" : "2019-05-14T00:42:12.808Z"
+      }
+    } ]
+  }
+}
