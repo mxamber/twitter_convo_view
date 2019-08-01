@@ -23,6 +23,24 @@ body {
 	display: none;
 }
 
+input {
+	display: none;
+}
+button {
+	background: url('icon_2.png');
+}
+#file {
+	background: url('icon_1.png');
+}
+#file, button {
+	width: 5vw;
+	height: 5vw;
+	border: none;
+	background-size: 100%;
+	image-rendering: pixelated;
+	box-sizing: border-box;
+}
+
 #wait h1 {
 	color: #fff;
 	text-align: center;
