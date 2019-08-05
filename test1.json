@@ -3,12 +3,21 @@
     "conversationId" : "14-12",
     "messages" : [ {
       "messageCreate" : {
+        "recipientId" : "12",
+	"text" : "https://twitter.com",
+	"mediaUrls" : [ ],
+	"senderId" : "14",
+	"id" : "1234",
+	"createdAt" : "2006-03-11T00:46:12.808Z"
+      }    
+    }, {
+      "messageCreate" : {
         "recipientId" : "14",
         "text" : "lolwut",
         "mediaUrls" : [ ],
         "senderId" : "12",
         "id" : "1127010986865696777",
-        "createdAt" : "2019-05-11T00:44:14.808Z"
+        "createdAt" : "2006-03-11T00:45:23.808Z"
       }
     }, {
       "messageCreate" : {
@@ -17,7 +26,7 @@
         "mediaUrls" : [ ],
         "senderId" : "14",
         "id" : "1127010986865696777",
-        "createdAt" : "2019-05-11T00:44:14.808Z"
+        "createdAt" : "2006-03-11T00:44:14.808Z"
       }
     }, {
       "messageCreate" : {
@@ -26,7 +35,7 @@
         "mediaUrls" : [ ],
         "senderId" : "12",
         "id" : "1127010986865696777",
-        "createdAt" : "2019-05-11T00:43:01.808Z"
+        "createdAt" : "2006-03-11T00:43:01.808Z"
       }
     }, {
       "messageCreate" : {

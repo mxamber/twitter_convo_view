@@ -51,6 +51,11 @@ function convo(raw) {
 		} else {
 			msg.setAttribute("class", "message2");
 		}
+		
+		var url_regexp = new RegExp('https{0,1}\:\/\/[^ ]*');
+		msgC.text = msgC.text.replace(url_regexp, '<a href="$&" target="_blank">$&</a>');
+		
+		
 		msg.innerHTML = msgC.text;
 		
 		var datestring = new Date(Date.parse(msgC.createdAt)).toLocaleString()
