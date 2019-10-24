@@ -1,3 +1,5 @@
+const errortext = "ERROR: invalid file"
+
 function $(expr) {
 	return document.querySelector(expr);
 }
@@ -15,20 +17,43 @@ function parse() {
 	var reader = new FileReader();
 	reader.onload = function() {
 		console.log("reader reading!");
-		$("#inner").innerHTML = reader.result;
-		convo(reader.result);
+		contents(reader.result);
 	}
 	
 	reader.readAsText(file);
 }
 
-function convo(raw) {
+
+function contents(raw) {
+	if(raw.startsWith("window.YTD.direct_message.part0") == false) {
+		console.log("dialogue");
+		dialogue(raw);
+		return;
+	}
+	raw = "{" + raw + "}";
+	raw = raw.replace("window.YTD.direct_message.part0 =", '"content" :');
+	var file = JSON.parse(raw);
+	if(typeof(file.content[0].dmConversation) != "object") {
+		console.log(errortext);
+		return;
+	} else {
+		console.log("FILE valid, processing...");
+	}
+}
+
+
+function dialogue(raw) {
 	var wait = $("#wait");
 	var top = $("#top");
 	var a_send = $("#sender");
 	var a_recp = $("#recipient");
 	
 	wait.style.display = "block";
+	
+	if(raw.includes("dmConversation") == false || raw.includes("conversationId") == false) {
+		console.log(errortext);
+		return;
+	}
 	
 	var convo = JSON.parse(raw).dmConversation;
 	
@@ -46,7 +71,10 @@ function convo(raw) {
 	convo.messages.forEach(function(item) {
 		var msgC = item.messageCreate;
 		var msg = document.createElement("div");
-		if(msgC.senderId == sender) {
+		
+		if(msgC.senderId == "notif") {
+			msg.setAttribute("class", "notif");
+		} else if(msgC.senderId == sender) {
 			msg.setAttribute("class", "message1");
 		} else {
 			msg.setAttribute("class", "message2");
@@ -58,10 +86,13 @@ function convo(raw) {
 		
 		msg.innerHTML = msgC.text;
 		
-		var datestring = new Date(Date.parse(msgC.createdAt)).toLocaleString()
-		var timep = document.createElement("p");
-		timep.innerHTML = datestring;
-		msg.appendChild(timep);
+		if(msgC.senderId != "notif") {
+			var datestring = new Date(Date.parse(msgC.createdAt)).toLocaleString()
+			var timep = document.createElement("p");
+			timep.innerHTML = datestring;
+			msg.appendChild(timep);
+		}
+		
 		$("#inner").appendChild(msg);
 		counter++;
 		if(counter >= convo.messages.length) {

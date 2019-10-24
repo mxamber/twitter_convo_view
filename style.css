@@ -86,6 +86,16 @@ button {
 	box-sizing: border-box;
 }
 
+
+.message1, .message2 {
+	margin-bottom: 0.2em;
+	border-radius: 20px;
+	padding: 5px;
+	padding: 8px 12px 0px;
+	max-width: 250px;
+	clear: both;
+}
+
 .message1 {
 	background: #1da1f2;
 	color: #ffffff;
@@ -97,16 +107,20 @@ button {
 	background: #e6ecf0;
 	color: #14171a;
 	float: left;
-	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 
-.message1, .message2 {
-	margin-bottom: 0.2em;
-	border-radius: 20px;
-	padding: 5px;
-	padding: 8px 12px 0px;
-	max-width: 250px;
-	clear: both;
+.notif {
+	background: #FBAA90;
+	color: #555;
+	font-size: small;
+	padding: 8px 12px;
+	min-width: 100%;
+	margin: 0 0 1em;
+	border-radius: 0;
+	box-sizing: border-box;
+	display: box;
+	text-align: center;
 }
 
 .message1 > p, .message2 > p {
